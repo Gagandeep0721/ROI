@@ -46,16 +46,16 @@ cash_flow = income - expenses - mortgage_payment
 
 print("Cash flow is:", cash_flow)
 
-def cash_on_cash_ROI(rental_income, operating_expenses, initial_investment):
-    net_operating_income = rental_income - operating_expenses
-    cash_on_cash_roi = (net_operating_income / initial_investment) * 100
+def cash_on_cash_ROI(rental_income, expenses, initial_investment):
+    net_income = rental_income - expenses
+    cash_on_cash_roi = (net_income / initial_investment) * 100
     return cash_on_cash_roi
 
 rental_income = 3500 # monthly rental income
-operating_expenses = 2400 # monthly operating expenses
+expenses = 2400 # monthly operating expenses
 initial_investment = 100000 # initial investment
 
-cash_on_cash_roi = cash_on_cash_ROI(rental_income, operating_expenses, initial_investment)
+cash_on_cash_roi = cash_on_cash_ROI(rental_income, expenses, initial_investment)
 Yearly_cash_on_cash_roi = (cash_on_cash_roi)*12
 print("Cash on Cash ROI: {:.2f}%".format(cash_on_cash_roi))
 print("Yearly cash on cash ROI: {:.2f}%".format(Yearly_cash_on_cash_roi))
